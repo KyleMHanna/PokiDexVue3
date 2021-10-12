@@ -62,12 +62,12 @@
         <ul class="abilities">
           <li>
             {{ pokemon.data.stats.map(s => s.stat.name) }}<br />
-            <span>Ghost</span>
+            <span>{{ pokemon.data.types.map(s => s.type.name) }}</span>
             <span class="power">15</span>
           </li>
           <li>
             Nightmare<br />
-            <span>Ghost</span>
+            <span>{{ pokemon.data.types.map(s => s.type.name) }}</span>
             <span class="power">60</span>
             <ul class="super">
               <li></li>
@@ -77,9 +77,13 @@
           </li>
         </ul> <!-- !.abilities -->
 
-      <!-- <div class="transfer">
-        <button class="button">Transfer</button>
-      </div> -->
+        <div class="transfer">
+          <button class="button"
+                  @click="catchPokemon(pokemon.data, pokemon.data.Id)"
+          >
+            Catch
+          </button>
+        </div>
       </div>
     <!-- !.poke-card -->
     </div>

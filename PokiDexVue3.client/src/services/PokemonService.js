@@ -19,7 +19,7 @@ class PokemonService {
   async catchPokemon(pokemon, Id) {
     try {
       pokemon.Id = Id
-      const res = await api.post('/api/myPokemon/', pokemon)
+      const res = await api.post('/api/mypokemon', pokemon)
       AppState.myPokemon = res.data
       this.getMyPokemon()
     } catch (error) {
