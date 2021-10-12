@@ -1,0 +1,14 @@
+{
+  "name": "pokidexvue3",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run setup:server",
+    "setup:app": "npm run setup:server && npm run setup:client",
+    "setup:client": "cd PokiDexVue3.client && npm i",
+    "setup:server": "cd PokiDexVue3 && npm i",
+    "start": "node PokiDexVue3/index.js"
+  },
+  "engines": {
+    "node": "^14.17.0"
+  }
+}
