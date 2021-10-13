@@ -12,15 +12,17 @@
         <div class="name">
           <h1> {{ pokemon.data.name }}</h1><span>#{{ pokemon.data.id }}</span>
           <div class="hp">
-            {{ pokemon.data.stats.map(s => s.base_stat) }}
+            HP {{ pokemon.data.stats[5].base_stat }}
           </div>
         </div>
         <ul class="stats">
-          <li>{{ pokemon.data.types.map(s => s.type.name) }}<br /><span>Type</span></li>
+          <li><span>Type</span><br />{{ pokemon.data.types[0].type.name }}</li>
           <li><br /><span>{{ pokemon.data.weight }} lbs </span></li>
           <li><br /><span>{{ pokemon.data.height }}ft</span></li>
         </ul>
         <div class="info">
+          <!-- <p>{{ pokemon.data.abilities[1].ability.name }}</p> -->
+          <p>{{ pokemon.data.abilities[0].ability.name }}</p>
         </div>
         <div class="transfer">
           <button class="button"
@@ -35,16 +37,24 @@
 </template>
 
 <script>
+
 import { pokemonService } from '../services/PokemonService.js'
+
 export default {
   props: {
     pokemon: { type: Object, required: true }
   },
   setup(props) {
     return {
+
       async catchPokemon(pokemon, Id) {
-        pokemonService.catchPokemon(pokemon, Id)
+        try {
+          pokemonService.catchPokemon(pokemon, Id)
+        } catch (error) {
+
+        }
       }
+
     }
   }
 }
