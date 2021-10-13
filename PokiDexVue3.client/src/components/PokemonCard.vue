@@ -3,15 +3,11 @@
     <div class="pokemon-container">
       <div class="power-level text-dark">
         CP: <span>{{ pokemon.data.base_experience }}</span>
-
         <div class="pokemon-snap">
           <img :src="pokemon.data.sprites.other['official-artwork'].front_default" alt="" class="img-fluid">
         </div>
-        <!-- !.pokemon-snap -->
         <div class="half-circle"></div>
       </div>
-      <!-- !.power-level -->
-
       <div class="poke-card">
         <div class="name">
           <h1> {{ pokemon.data.name }}</h1><span>#{{ pokemon.data.id }}</span>
@@ -19,35 +15,13 @@
             {{ pokemon.data.stats.map(s => s.base_stat) }}
           </div>
         </div>
-
         <ul class="stats">
           <li>{{ pokemon.data.types.map(s => s.type.name) }}<br /><span>Type</span></li>
           <li><br /><span>{{ pokemon.data.weight }} lbs </span></li>
           <li><br /><span>{{ pokemon.data.height }}ft</span></li>
         </ul>
-
         <div class="info">
         </div>
-        <!-- !.info -->
-
-        <!-- <ul class="abilities">
-          <li>
-            {{ pokemon.data.stats.map(s => s.stat.name) }}<br />
-            <span>{{ pokemon.data.types.map(s => s.type.name) }}</span>
-            <span class="power">15</span>
-          </li>
-          <li>
-            Nightmare<br />
-            <span>{{ pokemon.data.types.map(s => s.type.name) }}</span>
-            <span class="power">60</span>
-            <ul class="super">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </li>
-        </ul> !.abilities -->
-
         <div class="transfer">
           <button class="button"
                   @click="catchPokemon(pokemon.data, pokemon.data.Id)"
@@ -56,11 +30,8 @@
           </button>
         </div>
       </div>
-    <!-- !.poke-card -->
     </div>
-  <!-- !.pokemon-container -->
   </div>
-<!-- !.card-container -->
 </template>
 
 <script>
