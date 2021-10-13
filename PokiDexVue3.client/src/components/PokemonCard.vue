@@ -3,8 +3,7 @@
     <div class="pokemon-container">
       <div class="power-level text-dark">
         CP: <span>{{ pokemon.data.base_experience }}</span>
-        <br>
-        <span>#{{ pokemon.data.id }}</span>
+
         <div class="pokemon-snap">
           <img :src="pokemon.data.sprites.other['official-artwork'].front_default" alt="" class="img-fluid">
         </div>
@@ -15,10 +14,9 @@
 
       <div class="poke-card">
         <div class="name">
-          <h1>     {{ pokemon.data.name }}</h1>
+          <h1> {{ pokemon.data.name }}</h1><span>#{{ pokemon.data.id }}</span>
           <div class="hp">
             {{ pokemon.data.stats.map(s => s.base_stat) }}
-            {{ pokemon.data.stats.base_stat }}
           </div>
         </div>
 
@@ -32,7 +30,7 @@
         </div>
         <!-- !.info -->
 
-        <ul class="abilities">
+        <!-- <ul class="abilities">
           <li>
             {{ pokemon.data.stats.map(s => s.stat.name) }}<br />
             <span>{{ pokemon.data.types.map(s => s.type.name) }}</span>
@@ -48,7 +46,7 @@
               <li></li>
             </ul>
           </li>
-        </ul> <!-- !.abilities -->
+        </ul> !.abilities -->
 
         <div class="transfer">
           <button class="button"

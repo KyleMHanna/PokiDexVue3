@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pokemonBackround">
       <PokemonCard v-for="pokemon in pokemon" :key="pokemon.id" :pokemon="pokemon" />
     </div>
   </body>
@@ -106,6 +106,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .pokemonBackround {
+//   background-image: url(https://i.pinimg.com/originals/89/a8/9d/89a89d968151589a3cc24d41be5a503b.jpg);
+//  background-size: stretch;}
 $white: #fffaf0;
 
 $sky-fallback: #654ea3;

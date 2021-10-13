@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-warning px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
         <img
           alt="logo"
-          src="../assets/img/cw-logo.png"
+          src="https://png.pngitem.com/pimgs/s/2-25253_pokemon-pikachu-free-png-image-pokemon-mastermind-of.png"
           height="45"
         />
       </div>
@@ -23,8 +23,11 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
         <li>
-          <router-link :to="{ name: 'MyPokemon' }" class="btn text-success lighten-30 selectable text-uppercase">
-            My Pokemon
+          <router-link :to="{ name: 'MyPokemon' }" class="selectable text-uppercase">
+            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUVx03FcTh3zXVcUNrrtZ1e4FnH1-FqQsht4ASpoVLfJgAOOuXWylyRSVeXj7bHjcjDhE&usqp=CAU" alt="" height="45"> -->
+            <button class="btn-btn rounded-pill text-danger">
+              PokiDex
+            </button>
           </router-link>
         </li>
       </ul>
