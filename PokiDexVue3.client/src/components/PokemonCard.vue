@@ -12,17 +12,27 @@
         <div class="name">
           <h1> {{ pokemon.data.name }}</h1><span>#{{ pokemon.data.id }}</span>
           <div class="hp">
-            HP {{ pokemon.data.stats[5].base_stat }}
+            HP {{ pokemon.data.stats[1].base_stat }}
           </div>
         </div>
         <ul class="stats">
-          <li><span>Type</span><br />{{ pokemon.data.types[0].type.name }}</li>
-          <li><br /><span>{{ pokemon.data.weight }} lbs </span></li>
-          <li><br /><span>{{ pokemon.data.height }}ft</span></li>
+          <li><span>Type</span><br /><span>{{ pokemon.data.types[0].type.name }}</span></li>
+          <li><span>Weight</span><br /><span>{{ pokemon.data.weight }} kg </span></li>
+          <li><span>Height</span><br /><span>{{ pokemon.data.height }}m</span></li>
         </ul>
         <div class="info">
-          <!-- <p>{{ pokemon.data.abilities[1].ability.name }}</p> -->
-          <p>{{ pokemon.data.abilities[0].ability.name }}</p>
+          <!-- <p v-if="pokemon.data">
+            {{ pokemon.data.abilities[1].ability.name }}
+          </p> -->
+          <ul class="abilities">
+            <li>
+              {{ pokemon.data.abilities[0].ability.name }}<br />
+              <span>{{ pokemon.data.types[0].type.name }}</span>
+              <span class="power">{{ pokemon.data.stats[2].base_stat }} </span>
+              <ul class="super">
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="transfer">
           <button class="button text-dark"
@@ -133,7 +143,7 @@ body {
         width: 60%;
         height: 400px;
         border-left: 2px solid rgba(34, 197, 42, 0.3);
-        border-top: 2px solid rgba(229, 245, 8, 0.555);
+        border-top: 2px solid rgba(34, 197, 42, 0.3);
         border-right: 2px solid rgba(34, 197, 42, 0.3);
         border-radius: 100%;
         z-index: 1;

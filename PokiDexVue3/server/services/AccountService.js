@@ -74,5 +74,10 @@ class AccountService {
     )
     return account
   }
+
+  async getUserPokemon(userId) {
+    const pokemon = await dbContext.Pokemon.find({ userId }).populate('owner')
+    return pokemon
+  }
 }
 export const accountService = new AccountService()

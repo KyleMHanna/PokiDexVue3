@@ -82,6 +82,7 @@
         </div>
       </div>
     </div>
+    <!-- PokemonCard inserted here -->
     <div class="container-fluid">
       <div class="row justify-content-center pokemonBackround">
         <PokemonCard v-for="pokemon in pokemon" :key="pokemon.id" :pokemon="pokemon" />
