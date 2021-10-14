@@ -33,6 +33,7 @@
 import { computed } from '@vue/runtime-core'
 import { pokemonService } from '../services/PokemonService.js'
 import { AppState } from '../AppState.js'
+import Pop from '../utils/Pop.js'
 export default {
   props: {
     pokemon: { type: Object, required: true }
@@ -42,7 +43,12 @@ export default {
       myPokemon: computed(() => AppState.myPokemon),
 
       async ReleasePokemon(Id) {
-        pokemonService.releasePokemon(Id)
+        try {
+          pokemonService.releasePokemon(Id)
+          Pop.toast('Pokemon successfully released!', 'success')
+        } catch (error) {
+          Pop.toast(error, 'Could not release Pokemon')
+        }
       }
     }
   }

@@ -39,6 +39,7 @@
 <script>
 
 import { pokemonService } from '../services/PokemonService.js'
+import Pop from '../utils/Pop.js'
 
 export default {
   props: {
@@ -50,8 +51,9 @@ export default {
       async catchPokemon(pokemon, Id) {
         try {
           pokemonService.catchPokemon(pokemon, Id)
+          Pop.toast('Pokemon successfully caught!', 'success')
         } catch (error) {
-
+          Pop.toast(error, 'Pokemon ran')
         }
       }
 
