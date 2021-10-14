@@ -5,10 +5,10 @@
     <div class="character-area">
       <img class="character img-fluid" :src="pokemon.sprites.other['official-artwork'].front_default" alt="" />
     </div>
-    <div class="details">
-      <h3>{{ pokemon.name }}</h3>
-      <p>{{ pokemon.abilities[1].ability.name }}.</p>
-      <p>{{ pokemon.abilities[0].ability.name }}.</p>
+    <div class="details text-center">
+      <h1>{{ pokemon.name }}</h1>
+
+      <li>{{ pokemon.abilities[0].ability.name }}</li>
     </div>
     <ul class="stats">
       <li>
