@@ -6,7 +6,6 @@
       <img class="character img-fluid" :src="pokemon.sprites.other['official-artwork'].front_default" alt="" />
     </div>
     <div class="details">
-      <span>{{ pokemon.types.map(s => s.type.name) }}</span>
       <h3>{{ pokemon.name }}</h3>
       <p>{{ pokemon.abilities[1].ability.name }}.</p>
       <p>{{ pokemon.abilities[0].ability.name }}.</p>
