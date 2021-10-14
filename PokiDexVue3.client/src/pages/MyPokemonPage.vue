@@ -1,4 +1,7 @@
 <template>
+  <h1 class="text-center custom ">
+    Your Collection of Pokemon
+  </h1>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <MyPokemonCard v-for="p in myPokemon" :key="p.id" :pokemon="p" />
@@ -29,5 +32,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.custom{
+font-family: 'Press Start 2P', cursive;
+}
 
 </style>

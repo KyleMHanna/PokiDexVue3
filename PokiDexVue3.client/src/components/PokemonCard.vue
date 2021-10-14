@@ -25,7 +25,7 @@
           <p>{{ pokemon.data.abilities[0].ability.name }}</p>
         </div>
         <div class="transfer">
-          <button class="button"
+          <button class="button text-dark"
                   @click="catchPokemon(pokemon.data, pokemon.data.Id)"
           >
             Catch
@@ -130,9 +130,9 @@ body {
         left: 20%;
         width: 60%;
         height: 400px;
-        border-left: 2px solid #fff;
-        border-top: 2px solid #fff;
-        border-right: 2px solid rgba(255, 255, 255, .3);
+        border-left: 2px solid rgba(34, 197, 42, 0.3);
+        border-top: 2px solid rgba(229, 245, 8, 0.555);
+        border-right: 2px solid rgba(34, 197, 42, 0.3);
         border-radius: 100%;
         z-index: 1;
       }
