@@ -6,6 +6,6 @@ export const api = Axios.create({
 })
 // FIXME - might not work with it not being v2
 export const pokeApi = Axios.create({
-  baseURL: 'https://pokeapi.co/api/v2/pokemon',
+  baseURL: 'https://pokeapi.co/api/v2/pokemon?limit=150&offset=0',
   timeout: 8000
 })
