@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 
 import { pokemonService } from '../services/PokemonService.js'
 import Pop from '../utils/Pop.js'
@@ -63,7 +64,16 @@ export default {
       async catchPokemon(pokemon, Id) {
         try {
           pokemonService.catchPokemon(pokemon, Id)
-          Pop.toast('Pokemon successfully caught!', 'success')
+          // Pop.toast('Pokemon successfully caught!', 'success')
+          Swal.fire({
+            icon: 'success',
+            position: 'center',
+            timer: 4000,
+            timerProgressBar: true,
+            toast: true,
+            imageUrl: 'https://c.tenor.com/MMDa60lTwtIAAAAC/caught-pokemon.gif',
+            showConfirmButton: false
+          })
         } catch (error) {
           Pop.toast(error, 'Pokemon ran')
         }
