@@ -28,7 +28,9 @@
             <li>
               {{ pokemon.data.abilities[0].ability.name }}<br />
               <span>{{ pokemon.data.types[0].type.name }}</span>
-              <span class="power">{{ pokemon.data.stats[2].base_stat }} </span>
+
+              <span class="power"> {{ pokemon.data.stats[2].base_stat }} </span>
+
               <ul class="super">
               </ul>
             </li>

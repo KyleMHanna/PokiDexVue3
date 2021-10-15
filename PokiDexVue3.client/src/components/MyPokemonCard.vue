@@ -1,6 +1,4 @@
 <template>
-  <div id="moving-background" class="moving-background"></div>
-
   <div class="p-card psychic col-md-4">
     <div class="character-area">
       <img class="character img-fluid" :src="pokemon.sprites.other['official-artwork'].front_default" alt="" />
