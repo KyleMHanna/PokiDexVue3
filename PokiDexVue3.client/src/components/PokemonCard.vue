@@ -64,15 +64,11 @@ export default {
       async catchPokemon(pokemon, Id) {
         try {
           pokemonService.catchPokemon(pokemon, Id)
-          // Pop.toast('Pokemon successfully caught!', 'success')
           Swal.fire({
-
             position: 'center',
             timer: 2000,
             timerProgressBar: true,
-
             imageUrl: 'https://c.tenor.com/MMDa60lTwtIAAAAC/caught-pokemon.gif'
-
           })
         } catch (error) {
           Pop.toast(error, 'Pokemon ran')
