@@ -9,7 +9,7 @@ export const PokemonSchema = new Schema(
     stats: { type: Array, required: true },
     types: { type: Array, required: true },
     sprites: { type: Object, required: true },
-    ownerId: { type: String, ref: 'Account', required: false }
+    ownerId: { type: Schema.Types.ObjectId, ref: 'Account', required: false }
 
   },
   { timestamps: true, toJSON: { virtuals: true } }
