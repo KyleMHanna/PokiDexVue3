@@ -3,6 +3,7 @@ import { dbContext } from '../db/DbContext.js'
 class PokemonService {
   async catchPokemon(pokemonData) {
     const pokemon = await dbContext.Pokemon.create(pokemonData)
+    await pokemon.populate('owner')
     return pokemon
   }
 
