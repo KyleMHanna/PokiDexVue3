@@ -32,6 +32,7 @@ import { computed } from '@vue/runtime-core'
 import { pokemonService } from '../services/PokemonService.js'
 import { AppState } from '../AppState.js'
 import Pop from '../utils/Pop.js'
+import Swal from 'sweetalert2'
 export default {
   props: {
     pokemon: { type: Object, required: true }
@@ -42,8 +43,14 @@ export default {
 
       async ReleasePokemon(Id) {
         try {
+          const yes = await Pop.confirm('Are you sure you want to release Pokemon?')
+          if (!yes) { return }
+          Swal.fire({
+            position: 'center',
+            timer: 4000,
+            imageUrl: 'https://i.kym-cdn.com/photos/images/original/000/799/114/35c.gif'
+          })
           pokemonService.releasePokemon(Id)
-          Pop.toast('Pokemon successfully released!', 'success')
         } catch (error) {
           Pop.toast(error, 'Could not release Pokemon')
         }

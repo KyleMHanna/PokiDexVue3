@@ -66,13 +66,13 @@ export default {
           pokemonService.catchPokemon(pokemon, Id)
           // Pop.toast('Pokemon successfully caught!', 'success')
           Swal.fire({
-            icon: 'success',
+
             position: 'center',
-            timer: 4000,
+            timer: 2000,
             timerProgressBar: true,
-            toast: true,
-            imageUrl: 'https://c.tenor.com/MMDa60lTwtIAAAAC/caught-pokemon.gif',
-            showConfirmButton: false
+
+            imageUrl: 'https://c.tenor.com/MMDa60lTwtIAAAAC/caught-pokemon.gif'
+
           })
         } catch (error) {
           Pop.toast(error, 'Pokemon ran')
