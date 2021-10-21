@@ -21,9 +21,6 @@
           <li><span>Height</span><br /><span>{{ pokemon.data.height }}m</span></li>
         </ul>
         <div class="info">
-          <!-- <p v-if="pokemon.data">
-            {{ pokemon.data.abilities[1].ability.name }}
-          </p> -->
           <ul class="abilities">
             <li>
               {{ pokemon.data.abilities[0].ability.name }}<br />
