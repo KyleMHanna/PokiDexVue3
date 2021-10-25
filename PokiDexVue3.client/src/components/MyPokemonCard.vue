@@ -2,6 +2,7 @@
   <div class="p-card psychic col-md-4">
     <div class="character-area">
       <img class="character img-fluid" :src="pokemon.sprites.other['official-artwork'].front_default" alt="" />
+      <!-- updated the background color changing dynamically-->
     </div>
     <div class="details text-center">
       <h1>{{ pokemon.name }}</h1>
